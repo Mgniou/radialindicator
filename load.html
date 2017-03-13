@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="indicatorContainer"></div>
+    <button>sefsd</button>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/radialIndicator.js"></script>
+    <script>
+    $('#indicatorContainer').radialIndicator({
+        barColor: '#87CEEB',
+        barWidth: 10,
+        initValue: 40,
+        roundCorner: true,
+        fontWeight: 'normal',
+        fontSize: '30'
+    });
+    var radialObj = $('#indicatorContainer').data('radialIndicator');
+    $("button").click(function() {
+        radialObj.animate(80);      
+    })
+    </script>
+</body>
+
+</html>
